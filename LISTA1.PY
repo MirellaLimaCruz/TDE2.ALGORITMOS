@@ -180,3 +180,54 @@ R = float(input("Digite o valor de um raio de um círculo para imprimir a área 
 π = 3.141592
 area = round(π * R**2, 2)
 print("O resultado da área do círculo é: ", area)
+
+#35. Sejam a e b catetos de um triângulo, onde a hipotenusa é obtida pela equação: hipotenusa = raizquadrada a2 + b2. Faça um programa que receba os valores de a e b calcule o valor da hipotenusa através da equação. Imprima o resultado dessa operação.
+import math
+
+a = float(input("Digite o valor do cateto 'a' de um triângulo para imprimir o calculo do valor da hipotenusa: "))
+b = float(input("Digite o valor do cateto 'b' de um triângulo para imprimir o calculo do valor da hipotenusa: "))
+
+hipotenusa = math.sqrt(round(a**2 + b**2, 2))
+print("O resultado do calculo da hipotenusa é: ", hipotenusa)
+
+#36. Leia a altura e o raio de um cilindro circular e imprima o volume do cilindro. O volume de um cilindro circular é calculado por meio da seguinte fórmula: V = π * raio2 * altura, onde π = 3.141592.
+altura = float(input("Digite a altura de um cilindro circular para imprimir o volume do cilindro: "))
+raio = float(input("Digite o raio de um cilindro circular para imprimir o volume do cilindro: "))
+
+π = 3.141592
+volume = π * raio**2 * altura
+print("O volume do cilindro circular é: ", volume)
+
+#37. Faça um programa que leia o valor de um produto e imprima o valor com desconto, tendo em vista que o desconto foi de 12%.
+valor_produto = float(input("Digite o valor de um produto para imprimir um novo valor, mas com desconto de 12%: "))
+
+desconto = valor_produto * 0.12
+novo_valor = valor_produto - desconto
+print("O novo valor do produto é: ", novo_valor)
+
+#38. Leia o salário de um funcionário. Calcule e imprima o valor do novo salário, sabendo que ele recebeu um aumento de 25%.
+salario = float(input("Digite o salário para obter um novo valor, com aumento: "))
+
+aumento = salario * 0.25
+novo_salario = salario + aumento
+print("O novo salário é: ", novo_salario)
+
+#39. A importância de R$780.000,00, será dividida entre três ganhadores de um concurso. Sendo que da quantia total:
+# O primeiro ganhador receberá 46%; O segundo receberá 32%; O terceiro receberá o restante;
+#Calcule e imprima a quantia ganha por cada um dos ganhadores.
+importancia1 = 780000.00
+
+primeiro = importancia1 * 0.46
+importancia2 = importancia1 - primeiro 
+
+segundo = importancia2 * 0.32
+importancia3 = importancia2 - segundo
+
+terceiro = importancia3
+
+print("O primeiro ganhador receberá: ", primeiro)
+print("O segundo ganhador receberá: ", segundo)
+print("O terceiro ganhador receberá: ", terceiro)
+
+#40. Uma empresa contrata um encanador a R$30,00 por dia. Faça um programa que solicite o número de dias trabalhados pelo encanador e imprima a quantia líquida que deverá ser paga, sabendo-se que são descontados 8% para imposto de renda.
+dias = float(input("Digite o numero de dias trabalhados pelo encanador que cobra 30 reais pela diaria: "))
