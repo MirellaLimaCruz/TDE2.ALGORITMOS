@@ -65,3 +65,64 @@ elif n2 == n1:
     print("Números iguais")
 else: 
     print(f"O número {n2}, é maior que é o número {n1}")
+
+#8. Faça um programa que leia 2 notas de um aluno, verifique se as notas são válidas e exiba na tela a média destas notas. Uma nota válida deve ser, obrigatoriamente, um valor entre 0.0 e 10.0, onde caso a nota não possua um valor válido, este fato deve ser informado ao usuário e o programa termina.
+print("Digite 2 notas válidas (00.0 a 10.0) para imprimir a média.")
+n1 = float(input("Digite a nota 1: "))
+n2 = float(input("Digite a nota 2: "))
+
+if n1 and n2 < 11.0:
+    media = (n1 + n2)/2
+    print(media)
+else:
+    print ("Algum dos valores está inválido.")
+
+#9. Leia o salário de um trabalhador e o valor da prestação de um empréstimo. Se a prestação for maior que 20% do salário, imprima: "empréstimo não concedido", caso contrário imprima: "empréstimo concedido".
+print("Digite seu salário a o valor da prestação do empréstimo: ")
+salario = float(input("Salário: "))
+prestacao = float(input("Prestação: "))
+vinte_salario = salario * 0.20
+
+if prestacao > vinte_salario:
+    print ("Empréstimo não concedido.")
+else:
+    print("Empréstimo concedido.")
+
+#10. Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu peso ideal, utilizando as seguintes fórmulas (onde h corresponde à altura):
+#homens: (72.7 * h) - 58/ mulheres: (62.1 * h) - 44.7
+print("Digite sua altura e o seu sexo para calcular seu peso ideal.")
+h = float(input("Altura: "))
+sexo = input("Sexo (Masculino ou Feminino): ")
+
+if sexo.lower() == "masculino":
+    peso_idealm = (72.7 * h) - 58
+    print(f"Seu peso ideal é {peso_idealm:.2f}")
+elif sexo.lower() == "feminino":
+    peso_idealf = (62.1 * h) - 44.7
+    print(f"Seu peso ideal é {peso_idealf:.2f}")
+else:
+    print("Informação inválida.")
+
+#11. Escreva um programa que leia um número inteiro maior do que zero e devolva, na tela, a soma de todos os seus algarismos. Por exemplo, ao número 251 corresponderá o valor 8(2 + 5 + 1). Se o número lido não for maior do que zero, o programa terminará com a mensagem "Número inválido".
+n = int(input("Digite um número inteiro maior do que zero, para imprimir a soma de todos os seus algarismos: "))
+
+if n <= 0:
+    print("Número inválido")
+else:
+    soma = 0
+    string_n = str(n)
+    for caracteres in string_n:
+        soma += int(caracteres)
+    print(f"A soma dos caracteres é {soma}")
+
+#12. Ler um número inteiro. Se o numero lido for negativo, escreva a mensagem "Número inválido". Se o número for positivo, calcular o logaritmo deste número.
+import math
+n = int(input("Digite um número inteiro para calcular o seu logaritmo: "))
+
+if n < 0:
+    print("Número inválido")
+else:
+    logaritmo = math.log(n)
+    print (f"{logaritmo:.2f}")
+
+#13. Faça um algoritmo que calcule a méia ponderada das notas de 3 provas. A primeira e a segunda prova tem peso 1 e a terceira tem peso 2. Ao final, mostrar a média do aluno e indicar se o aluno foi aprovado ou reprovado. A nota para aprovação deve ser igual ao superior a 60 pontos.
